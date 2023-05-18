@@ -1,0 +1,9 @@
+all:
+  hosts:
+    vm02:
+      ansible_host: ansible-client-two
+
+admin:
+  hosts:
+    vm02:
+      ansible_host: ansible-client-two

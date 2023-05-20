@@ -1,5 +1,6 @@
 - name: Install NodeJs
-  hosts: all
+  hosts: vm01:
+      ansible_host: ansible-client-one
   tasks:
     - name: Install Node
       shell: curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
@@ -9,6 +10,7 @@
       become: true
       ansible.builtin.apt:
         name:
+          - nodejs
           - npm
         state: present
         update_cache: yes

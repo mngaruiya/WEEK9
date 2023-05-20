@@ -9,7 +9,6 @@
       become: true
       ansible.builtin.apt:
         name:
-          - nodejs
           - npm
         state: present
         update_cache: yes

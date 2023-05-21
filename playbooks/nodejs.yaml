@@ -1,6 +1,12 @@
 - name: Install NodeJs
   hosts: all
   tasks:
+    
+    - name: Install NPM
+      shell: sudo apt install npm
+      args:
+        executable: /bin/bash
+
     - name: Install Node
       shell: curl -fsSL https://deb.nodesource.com/setup_12.x | sudo -E bash -
       args:

@@ -7,11 +7,6 @@
       args:
         executable: /bin/bash
 
-    - name: Install NPM
-      shell: sudo apt install npm
-      args:
-        executable: /bin/bash
-
     - name: Install Node
       shell: curl -fsSL https://deb.nodesource.com/setup_10.24.0.x | sudo -E bash -
       args:

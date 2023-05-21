@@ -2,6 +2,11 @@
   hosts: all
   tasks:
     
+    - name: Install Curl
+      shell: sudo apt install curl
+      args:
+        executable: /bin/bash
+        
     - name: Install NPM
       shell: sudo apt install npm
       args:

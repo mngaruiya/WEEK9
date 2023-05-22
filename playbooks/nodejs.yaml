@@ -1,14 +1,8 @@
 - name: Install NodeJs
   hosts: all
   tasks:
-    
-    - name: Install Curl
-      shell: sudo apt install curl
-      args:
-        executable: /bin/bash
-
     - name: Install Node
-      shell: curl -fsSL https://deb.nodesource.com/setup_10.24.0.x | sudo -E bash -
+      shell: curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
       args:
         executable: /bin/bash
     - name: Install nodejs package
@@ -17,6 +11,8 @@
         name:
           - nodejs
           - npm
+        state: present
+        update_cache: yes
         state: present
         update_cache: yes
 

@@ -1,16 +1,16 @@
 all:
   hosts:
-    vm01:
-      ansible_host: ansible-client-one
-    vm02:
-      ansible_host: ansible-client-two
+    vm03:
+      ansible_host: ansible-client-three
+    vm04:
+      ansible_host: ansible-client-four
 
 accounting:
   hosts:
-   vm01:
-     ansible_host: ansible-client-one
+   vm03:
+     ansible_host: ansible-client-three
 
 admin:
   hosts:
-   vm02:
-        ansible_host: ansible-client-two
+   vm04:
+        ansible_host: ansible-client-four
